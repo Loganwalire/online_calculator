@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="proto.css"><!--LINKING THE CSS FILE TO HTML-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"><!--LINKING THE BOOTSTRAP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--LINKING THE GOOGLE FONT-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="icons8-calculator-30.png"><!--FAVICON-->
+    <script src="https://kit.fontawesome.com/f09f131195.js" crossorigin="anonymous"></script><!--fontawesome-->
+</head>
+<body>
+    <!--calculator section-->
+    <section class="calsection">
+        <div class="firstdiv">
+            <h1>CALCULATOR</h1>
+            <p>A calculator is a device that performs arithmetic operations on numbers. Nowadays, we can use calculator online also so that we don't have to buy the electronic calculator. </p>
+        <div class="seconddiv">
+            <input type="text" placeholder="0" id="answer" class="textbox">
+            
+            <button type="button" class="btn btn-info" onclick="allclear()" >AC</button><!--used bootstrap info-button styles-->
+            <button type="button" class="btn btn-info" onclick="display('%')" >%</button>
+            <button type="button" class="btn btn-info " onclick="square()">sq</button>
+            <button type="button" class="btn btn-info " onclick="del()">DEL</button>
+            <button type="button" class="btn btn-info" onclick="display('7')">7</button>
+            <button type="button" class="btn btn-info" onclick="display('8')">8</button>
+            <button type="button" class="btn btn-info" onclick="display('9')">9</button>
+            <button type="button" class="btn btn-info" onclick="display('-')"><i class="fa-solid fa-minus"></i></button><!--used some fontawesome icons-->
+            <button type="button" class="btn btn-info" onclick="display('4')">4</button>
+            <button type="button" class="btn btn-info" onclick="display('5')">5</button>
+            <button type="button" class="btn btn-info" onclick="display('6')">6</button>
+            <button type="button" class="btn btn-info" onclick="display('+')"><i class="fa-solid fa-plus"></i></button>
+            <button type="button" class="btn btn-info" onclick="display('1')">1</button>
+            <button type="button" class="btn btn-info" onclick="display('2')">2</button>
+            <button type="button" class="btn btn-info" onclick="display('3')">3</button>
+            <button type="button" class="btn btn-info" onclick="display('*')"><i class="fa-solid fa-asterisk"></i></button>
+            <button type="button" class="btn btn-info" onclick="display('0')">0</button>
+            <button type="button" class="btn btn-info" onclick="display('.')">.</button>
+            <button type="button" class="btn btn-info" onclick="display('/')"><i class="fa-solid fa-divide"></i></button>
+            <button type="button" class="btn btn-info" onclick="calculate()" class="equal"><i class="fa-solid fa-equals"></i></button>
+           
+        </div>
+       </div>
+    </section>
+    <!--form section-->
+    <h2 id="formheading">FILL IN THE FEEDBACK FORM</h2>
+    <section class="feedbacksection">
+        <form action=""><!--creating a form-->
+            <div class="formgroup">
+                <label for="name">YOUR FULL NAME</label><br><!--given some labels for different input fields-->
+                <input type="text" id="name" required>
+            </div>
+            <div class="formgroup">
+                <label for="source">Where did you first hear about us?</label><br>
+                <input type="text" id="source" required>
+            </div>
+            <div class="formgroup" >
+                <label for="rating">HOW WOULD YOU RATE YOUR EXPERIENCE ON THIS SITE</label>
+                <br>
+                <input type="radio" name="review" id="rating" required><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><br>
+                <input type="radio" name="review" id="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><br>
+                <input type="radio" name="review" id="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><br>
+                <input type="radio" name="review" id="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><br>
+                <input type="radio" name="review" id="rating"><i class="fa-solid fa-star"></i><br>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+
+    </section>
+        
+    <script src="minor.js"></script><!--linking the js file to html-->
+</body>
+</html>

@@ -1,0 +1,124 @@
+*{   /* universal selector*/
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;/*this is google font that we linked*/
+}
+.firstdiv{
+    height: 100vh;
+    background-image: linear-gradient(200deg, #A9C5EF, #DFEEBD);/* used online linear gradient for the background style*/
+    max-width: 100%;
+    display: flex;/* flex box*/
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* vertically aligned*/
+    color: rgb(245, 240, 240);
+        
+}
+h1, p{
+    color: rgb(17, 75, 10);
+    text-decoration: solid;
+}
+
+.firstdiv > h1{/* styling the heading*/
+    font-size: 5rem;
+    padding: 0.5rem;
+    margin: 0rem 0rem 1rem 0rem;
+}
+.firstdiv > p{/* styling the paragraph*/
+    padding: 0.5rem;
+    margin: 0rem 0rem 0.9rem 0rem ;
+    font-size: 1.5rem;
+    width: 85%;
+    text-align: center;
+}
+.seconddiv{
+    display: grid;/* grid layout for the calculator*/
+    border: 5px solid rgb(97, 97, 221);
+    grid-template-columns: repeat(4,68px); /*4 column grid*/
+    border-radius: 1rem;
+    width: auto; 
+    height: auto;
+    background-color: black;
+    
+}
+.textbox{
+    grid-column: span 4;/* takes width of 4 column*/
+    background-color: grey;
+    height: 5rem;
+    width: auto;
+    border: none;
+    border-radius: 0.9rem;
+    color: black;
+    font-size: 2rem;   
+    text-align: end;
+    margin: 0.6rem 0.1rem ;
+    padding: 1rem 0.5rem;
+    
+    
+}
+::placeholder{/* pseudo element*/
+    color: black;
+    font-size: 2rem;
+}
+.btn{/*overiding the bootstrap button stylings*/
+    border: thin !important;
+    border-radius: 50% !important;
+    color: white !important;
+    padding: 0.9rem 0.5rem !important;
+    font-size: 1rem !important;
+    height: auto !important;
+    width: auto !important;
+    background-color: rgb(225, 48, 84) !important;
+    margin: 0.3rem 0.1rem !important;
+
+}
+.btn:hover{/*given hover function to buttons*/
+    color: blue !important;
+}
+form{/* styling the form*/
+    border:2px solid grey ;
+    width: max-content;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px 0px;
+    background-color: bisque;
+}
+.feedbacksection{/* giving flex to the feedbacksection*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#formheading{/* styling the form heading*/
+    text-align: center;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+label{/* styling the label*/
+    font-size: 20px;
+}
+.formgroup > input{/* styling the input element of form*/
+    padding: 5px;
+    font-size: 15px;
+    
+}
+
+@media only screen and (max-width:500px){/* media query*/
+    .firstdiv > h1{
+        font-size: 2.4rem;
+        margin-top: 3rem;
+    }
+    .firstdiv > p{
+        font-size: 1rem;
+
+    } 
+    #formheading{
+        font-size: 1.85rem;
+    }
+    form{
+        width: 400px;
+        height: 430px;
+        margin: 25px 20px 25px 20px;
+        padding: 13px;
+    }
+    
+}
